@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: example-app
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: 'https://github.com/simonliska/helm-ardiff'
+      path: argocd-apps/chart/hello-world
+      targetRevision: HEAD
+      helm:
+        valueFiles:
+          - $values/chart/hello-world/values.yaml
+    - repoURL: 'https://github.com/simonliska/helm-ardiff'
+      ref: values
+  destination:
+    name: in-cluster
+    namespace: default
