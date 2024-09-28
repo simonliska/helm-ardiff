@@ -10,16 +10,16 @@ spec:
       targetRevision: HEAD
       helm:
         valueFiles:
-          - $values/chart/hello-world/values.yaml
+          - $values/argocd-apps/chart/hello-world/values.yaml
     - repoURL: 'https://github.com/simonliska/helm-ardiff'
       ref: values
 
-  # destination:
-  #   server: 'https://kubernetes.default.svc'
-  #   namespace: default
-  # syncPolicy:
-  #   automated:
-  #     prune: true
-  #     selfHeal: true
-  #   syncOptions:
-  #     - CreateNamespace=true
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
