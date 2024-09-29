@@ -11,7 +11,11 @@ spec:
       targetRevision: HEAD
       helm:
         valueFiles:
+<<<<<<< HEAD
           - $values/chart/hello-world/values.yaml
+=======
+          - chart/hello-world/values.yaml
+>>>>>>> main
     - repoURL: 'https://github.com/simonliska/helm-ardiff'
       ref: values
   destination:

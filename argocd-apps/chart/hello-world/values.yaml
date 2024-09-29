@@ -11,7 +11,11 @@ image:
   tag: ""
 
 nameOverride: ""
+<<<<<<< HEAD
 fullnameOverride: "app2"
+=======
+fullnameOverride: "app1"
+>>>>>>> main
 
 serviceAccount:
   # Specifies whether a service account should be created
