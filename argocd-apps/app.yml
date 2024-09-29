@@ -11,7 +11,7 @@ spec:
       targetRevision: HEAD
       helm:
         valueFiles:
-          - argocd-apps/chart/hello-world/values.yaml
+          - values.yaml
   destination:
     name: in-cluster
     namespace: default
